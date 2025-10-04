@@ -1,0 +1,161 @@
+/* Qrcode.css */
+
+/* ---------------------------------- */
+/* Main Container Styling */
+/* ---------------------------------- */
+.qrcode-container {
+  /* Soft, multi-color gradient background */
+  background: linear-gradient(135deg, #f0f4f8 0%, #e9edf5 20%, #fcecfc 60%, #ffe3e3 100%);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 4rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #1a1a1a;
+  box-sizing: border-box;
+}
+
+/* ---------------------------------- */
+/* Heading */
+/* ---------------------------------- */
+.qrcode-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #5a1a65;
+  margin-bottom: 2.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.08); 
+  text-align: center;
+}
+
+/* ---------------------------------- */
+/* Input & Button Group */
+/* ---------------------------------- */
+
+.input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    padding: 0 10px;
+}
+
+/* Input Field */
+.input-field {
+  flex-grow: 1;
+  padding: 1rem 1.5rem;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  font-family: 'Lato', sans-serif;
+}
+
+.input-field:focus {
+  border-color: #ff71b7;
+  box-shadow: 0 0 8px rgba(255, 113, 183, 0.3);
+}
+
+/* Generate Button */
+.generate-button {
+  background: linear-gradient(45deg, #a546ff, #ff71b7); 
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  margin-left: 1rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(165, 70, 255, 0.4); 
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.generate-button:hover {
+  transform: translateY(-2px); 
+  box-shadow: 0 8px 20px rgba(255, 113, 183, 0.6); 
+}
+
+.generate-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ---------------------------------- */
+/* QR Code Display Area */
+/* ---------------------------------- */
+.qr-image-container {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+  transition: all 0.5s ease;
+  
+  /* Layout for image and button */
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.qr-code-image {
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  border: 4px solid #fcecfc;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------------------------------- */
+/* Download Button Style */
+/* ---------------------------------- */
+.download-button {
+  /* Blue-to-Purple gradient */
+  background: linear-gradient(90deg, #5c7cfa, #845ef7); 
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(92, 124, 250, 0.4);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 250px;
+}
+
+.download-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(132, 94, 247, 0.5);
+}
+
+/* ---------------------------------- */
+/* Responsive Adjustments */
+/* ---------------------------------- */
+@media (max-width: 650px) {
+    .qrcode-heading {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .input-field {
+        margin-bottom: 1rem;
+    }
+    .generate-button {
+        margin-left: 0;
+        width: 100%;
+    }
+}

@@ -1,0 +1,106 @@
+/* landing.css - Focused on Multi-Color Background */
+
+/* ---------------------------------- */
+/* Global Container & Background (UPDATED) */
+/* ---------------------------------- */
+.landing {
+  /* New Enhanced Background: Richer, multi-color soft gradient */
+  background: linear-gradient(135deg, #f0f4f8 0%, #e9edf5 20%, #fcecfc 60%, #ffe3e3 100%);
+  
+  /* Layout & Positioning (Retained from previous version) */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  padding-left: 10%;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif; 
+}
+
+/* --- (The rest of the CSS remains the same as the previous "Enhanced Version") --- */
+
+/* Main Heading */
+#main_heading {
+  font-size: 5rem; 
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 800; 
+  color: #1a1a1a; 
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05); 
+}
+
+/* Paragraph text */
+#para {
+  font-size: 1.5rem; 
+  font-family: 'Lato', sans-serif; 
+  font-weight: 300;
+  color: #5d6d7e; 
+  margin-bottom: 2rem;
+}
+
+/* Button style */
+#get_started {
+  background: linear-gradient(45deg, #a546ff, #ff71b7); 
+  color: white;
+  border: none;
+  margin-top: 1rem;
+  padding: 1rem 2.5rem;
+  border-radius: 50px; 
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(165, 70, 255, 0.4); 
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+#get_started:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 15px 30px rgba(255, 113, 183, 0.6); 
+}
+
+/* Decorative Elements (Blobs) */
+.landing::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 204, 235, 0.9), rgba(165, 70, 255, 0.3));
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  top: -5%;
+  right: -5%;
+  opacity: 0.4;
+  filter: blur(50px);
+  animation: float 15s ease-in-out infinite;
+  z-index: 1;
+}
+
+.landing::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(165, 70, 255, 0.6), rgba(255, 204, 235, 0.3));
+  border-radius: 60% 40% 40% 60% / 60% 60% 40% 40%; 
+  bottom: 5%;
+  left: 5%;
+  opacity: 0.5;
+  filter: blur(40px);
+  animation: float 20s reverse ease-in-out infinite;
+  z-index: 1;
+}
+
+/* Keyframe for floating animation */
+@keyframes float {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-10px, 15px) rotate(5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
