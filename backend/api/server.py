@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Form
 from fastapi.middleware.cors import CORSMiddleware
-from qrcode_gene import generate_qr
+from .qrcode_gene import generate_qr
 
 app = FastAPI()
 
